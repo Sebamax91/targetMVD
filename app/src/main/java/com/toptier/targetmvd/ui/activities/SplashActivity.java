@@ -10,7 +10,7 @@ public class SplashActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         startActivity(new Intent(this,
-                SignUpActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-        this.finish();
+                MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        finish();
     }
 }
