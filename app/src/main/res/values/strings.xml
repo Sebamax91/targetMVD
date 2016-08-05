@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">TargetMVD</string>
+    <string name="app_name">Target MVD</string>
     <string name="title_activity_sign_up">SignUp</string>
+
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="connect_with_facebook">Connect with Facebook</string>
 </resources>
