@@ -26,6 +26,7 @@
             android:label="@string/title_activity_sign_up" />
         <activity
             android:name=".ui.activities.SignInActivity" />
+            android:theme="@style/NoActionBar"/>
     </application>
 
 </manifest>

@@ -26,7 +26,9 @@ public class MainPresenter extends BasePresenter {
     public void signInOnClick(MainView.SignInOnClickEvent e) {
         Activity activity = mView.getActivity();
 
-        if (activity == null) { return; }
+        if (activity == null) {
+            return;
+        }
 
         Intent intent = new Intent(activity, SignInActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
