@@ -18,6 +18,14 @@ public class BasePresenter {
         } else {
             activity.startActivity(intent);
         }
-        activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    }
+
+    public void finishActivity(Activity activity) {
+        // Check if the transition needs to be done according to the Android version of the device.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            activity.finishAfterTransition();
+        } else {
+            activity.finish();
+        }
     }
 }

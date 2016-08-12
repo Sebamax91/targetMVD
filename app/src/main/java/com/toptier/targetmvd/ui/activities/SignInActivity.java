@@ -1,6 +1,7 @@
 package com.toptier.targetmvd.ui.activities;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.squareup.otto.Bus;
 import com.toptier.targetmvd.R;
@@ -33,5 +34,15 @@ public class SignInActivity extends BaseActivity {
     public void onPause() {
         super.onPause();
         unregister(mPresenter);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                mPresenter.finishActivity(this);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

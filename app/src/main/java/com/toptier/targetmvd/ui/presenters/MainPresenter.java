@@ -36,5 +36,6 @@ public class MainPresenter extends BasePresenter {
         Pair<View, String> pairImage = Pair.create(ButterKnife.findById(activity, R.id.image), activity.getString(R.string.transition_image));
 
         startActivity(activity, intent, pairTitle, pairButton, pairImage);
+        activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 }
