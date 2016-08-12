@@ -9,6 +9,7 @@ import com.toptier.targetmvd.ui.activities.SignUpActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class SignUpView extends BaseView {
     private Bus mBus;
@@ -21,7 +22,14 @@ public class SignUpView extends BaseView {
 
         ButterKnife.bind(this, activity);
 
+        setActionBar(getActivity(), getActivity().getString(R.string.sign_up));
+
         initializeSpinner();
+    }
+
+    @OnClick(R.id.sign_in)
+    public void signInOnClick() {
+        mBus.post(new MainView.SignInOnClickEvent());
     }
 
     private void initializeSpinner() {

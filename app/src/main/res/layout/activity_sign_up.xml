@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/main_background"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:transitionName="@string/transition_image"/>
 
 
     <com.toptier.targetmvd.utils.fonts.OpenSansTextView
@@ -22,75 +23,121 @@
         android:textAllCaps="true"
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:transitionName="@string/transition_title"/>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="80dp"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:padding="@dimen/fab_margin"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/layout_username"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:transitionGroup="true">
 
-            <EditText
-                android:id="@+id/edit_text_username"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_text_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="@string/username" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_text_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_text_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_text_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/spinner_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:singleLine="true"
-                android:hint="@string/username" />
-        </android.support.design.widget.TextInputLayout>
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+            </Spinner>
+        </LinearLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/layout_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/edit_text_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:singleLine="true"
-                android:hint="@string/email"
-                android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/layout_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/edit_text_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:singleLine="true"
-                android:hint="@string/email"
-                android:inputType="textPassword"/>
-        </android.support.design.widget.TextInputLayout>
-
-        <Spinner
-            android:id="@+id/spinner_gender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </Spinner>
-
-        <Button
-            android:id="@+id/sign_up"
+        <LinearLayout
+            android:id="@+id/bottom_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/black"
-            android:text="@string/sign_up"
-            android:textColor="@android:color/white" />
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/forgot_password"/>
-    </LinearLayout>
+            <Button
+                android:id="@+id/sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/black"
+                android:text="@string/sign_up"
+                android:textColor="@android:color/white"
+                android:transitionName="@string/transition_button_sign_up" />
+
+            <View
+                android:layout_width="96dp"
+                android:layout_height="1px"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorDarkGrey" />
+
+            <Button
+                android:id="@+id/sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/sign_in"
+                android:textColor="@color/colorDarkGrey" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
 </RelativeLayout>

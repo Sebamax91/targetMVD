@@ -8,6 +8,7 @@ import android.view.View;
 import com.squareup.otto.Subscribe;
 import com.toptier.targetmvd.R;
 import com.toptier.targetmvd.ui.activities.SignInActivity;
+import com.toptier.targetmvd.ui.activities.SignUpActivity;
 import com.toptier.targetmvd.ui.models.MainModel;
 import com.toptier.targetmvd.ui.views.MainView;
 
@@ -39,5 +40,21 @@ public class MainPresenter extends BasePresenter {
 
         startActivity(activity, intent, pairTitle, pairButton, pairImage);
         activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    }
+
+    @Subscribe
+    public void signUpOnClick(MainView.SignUpOnClickEvent e) {
+        Activity activity = mView.getActivity();
+
+        if (activity == null) {
+            return;
+        }
+        Intent intent = new Intent(activity, SignUpActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+
+        Pair<View, String> pairTitle = Pair.create(ButterKnife.findById(activity, R.id.title), activity.getString(R.string.transition_title));
+        Pair<View, String> pairButton = Pair.create(ButterKnife.findById(activity, R.id.sign_up), activity.getString(R.string.transition_button_sign_up));
+        Pair<View, String> pairImage = Pair.create(ButterKnife.findById(activity, R.id.image), activity.getString(R.string.transition_image));
+        startActivity(activity, intent, pairTitle, pairButton, pairImage);
     }
 }

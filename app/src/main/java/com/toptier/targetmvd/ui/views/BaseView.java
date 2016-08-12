@@ -1,8 +1,8 @@
 package com.toptier.targetmvd.ui.views;
 
-import android.support.v7.app.ActionBar;
 import android.content.Context;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 
 public class BaseView extends ActivityView {

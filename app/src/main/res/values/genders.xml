@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="genders_array">
-        <item>Football</item>
-        <item>Travel</item>
-        <item>Politics</item>
-        <item>Art</item>
-        <item>Dating</item>
-        <item>Music</item>
-        <item>Movies</item>
-        <item>Series</item>
+        <item>Female</item>
+        <item>Male</item>
     </string-array>
 </resources>

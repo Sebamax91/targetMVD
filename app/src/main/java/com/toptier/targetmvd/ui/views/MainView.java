@@ -1,7 +1,5 @@
 package com.toptier.targetmvd.ui.views;
 
-import android.widget.ArrayAdapter;
-
 import com.squareup.otto.Bus;
 import com.toptier.targetmvd.R;
 import com.toptier.targetmvd.ui.activities.MainActivity;

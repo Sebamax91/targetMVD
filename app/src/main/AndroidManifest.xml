@@ -22,11 +22,9 @@
             android:name=".ui.activities.MainActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".ui.activities.SignUpActivity"
-            android:label="@string/title_activity_sign_up" />
+            android:name=".ui.activities.SignUpActivity" />
         <activity
             android:name=".ui.activities.SignInActivity" />
-            android:theme="@style/NoActionBar"/>
     </application>
 
 </manifest>
