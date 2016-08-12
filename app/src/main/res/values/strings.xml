@@ -5,4 +5,15 @@
     <string name="sign_in">Sign in</string>
     <string name="sign_up">Sign up</string>
     <string name="connect_with_facebook">Connect with Facebook</string>
+
+    <string name="forgot_password">Forgot your password?</string>
+
+    <!-- HINTS -->
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+
+    <!-- TRANSITIONS -->
+    <string name="transition_title">Title transition</string>
+    <string name="transition_button_sign_in">Sign in button transition</string>
+    <string name="transition_image">Image transition</string>
 </resources>
