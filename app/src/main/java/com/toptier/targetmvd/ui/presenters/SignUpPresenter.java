@@ -3,7 +3,7 @@ package com.toptier.targetmvd.ui.presenters;
 import com.toptier.targetmvd.ui.models.SignUpModel;
 import com.toptier.targetmvd.ui.views.SignUpView;
 
-public class SignUpPresenter {
+public class SignUpPresenter extends BasePresenter {
     private SignUpView mView;
     private SignUpModel mModel;
 
