@@ -6,6 +6,11 @@
     <string name="sign_up">Sign up</string>
     <string name="connect_with_facebook">Connect with Facebook</string>
 
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="select_your_gender">Select your gender</string>
     <string name="forgot_password">Forgot your password?</string>
 
     <!-- HINTS -->
@@ -16,4 +21,6 @@
     <string name="transition_title">Title transition</string>
     <string name="transition_button_sign_in">Sign in button transition</string>
     <string name="transition_image">Image transition</string>
+    <string name="transition_button_sign_up">Sign up button transition</string>
+
 </resources>

@@ -50,7 +50,8 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorDarkGrey"
             android:text="@string/sign_up"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:transitionName="@string/transition_button_sign_up" />
 
         <Button
             android:id="@+id/connect_with_facebook"

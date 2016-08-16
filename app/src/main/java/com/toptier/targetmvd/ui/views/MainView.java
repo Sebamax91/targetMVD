@@ -7,7 +7,8 @@ import com.toptier.targetmvd.ui.activities.MainActivity;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainView extends ActivityView {
+
+public class MainView extends BaseView {
     private Bus mBus;
 
     public MainView(MainActivity activity, Bus bus) {
@@ -22,5 +23,11 @@ public class MainView extends ActivityView {
         mBus.post(new SignInOnClickEvent());
     }
 
+    @OnClick(R.id.sign_up)
+    public void signUpOnClick() {
+        mBus.post(new SignUpOnClickEvent());
+    }
+
+    public static class SignUpOnClickEvent {}
     public static class SignInOnClickEvent {}
 }
